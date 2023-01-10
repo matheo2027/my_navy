@@ -20,6 +20,6 @@ int my_put_nbr(int nb);
 
 int my_putstr(const char* str);
 
-int check_argv(char *av);
+int check_argv(char **av);
 
 #endif /* !NAVY_H_ */

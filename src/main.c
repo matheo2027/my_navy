@@ -19,6 +19,7 @@ int main(int ac, char **av)
         h_flag();
         return (0);
     }
-    check_argv(av[1]);
+    if (check_argv(av) == 1)
+        return (84);
     return 0;
 }
