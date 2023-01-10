@@ -7,14 +7,16 @@
 
 SRC		=	lib/my_putstr.c	\
 			lib/my_putchar.c	\
+			lib/my_put_nbr.c	\
 			src/main.c	\
-			src/flags.c	\
+			src/check_argv.c	\
+			src/flags.c
 
 OBJ		=	$(SRC:.c=.o)
 
 NAME	=	navy
 
-CPPFLAGS	=	-I./include
+CPPFLAGS	=	-I./include -W -Wall -Wextra
 
 $(NAME):	$(OBJ)
 		gcc -o $@ $(OBJ) $(CPPFLAGS) -ggdb3

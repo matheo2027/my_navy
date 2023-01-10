@@ -6,6 +6,7 @@
 */
 
 #include "navy.h"
+#include <stdbool.h>
 
 int main(int ac, char **av)
 {
@@ -16,6 +17,8 @@ int main(int ac, char **av)
     }
     if (av[1][0] == '-' && av[1][1] == 'h' && av[1][2] == '\0') {
         h_flag();
+        return (0);
     }
+    check_argv(av[1]);
     return 0;
 }

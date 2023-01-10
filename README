@@ -1,4 +1,4 @@
-AUTHORIZED FUNCTIONS:
+FUNCTIONS:
 
 1. open, close, read, write
     -> <fcntl.h>
