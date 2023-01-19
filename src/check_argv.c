@@ -5,9 +5,6 @@
 ** check filepath
 */
 
-#include <stdbool.h>
-#include <fcntl.h>
-#include <unistd.h>
 #include <stdio.h>
 #include "navy.h"
 
@@ -19,9 +16,6 @@ int check_argv(char **av)
         my_putstr("FILE NOT FOUND\n");
         return (1);
     }
-    char c;
-    while ((c = fgetc(fp)) != EOF)
-        my_putchar(c);
 
     fclose(fp);
     return (0);

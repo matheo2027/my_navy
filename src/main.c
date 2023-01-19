@@ -6,11 +6,10 @@
 */
 
 #include "navy.h"
-#include <stdbool.h>
 
 int main(int ac, char **av)
 {
-    if (ac < 2 || ac > 3) {
+    if (ac != 2) {
         write(2, "Error: incorrect number of "
         "arguments given, retry with -h\n", 59);
         return 84;
