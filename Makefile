@@ -1,34 +1,42 @@
 ##
-## EPITECH PROJECT, 2023
-## B-PSU-100-BDX-1-1-navy-matheo.piques
+## EPITECH PROJECT, 2022
+## makefile_lib
 ## File description:
-## Makefile
+## Une desc
 ##
 
-SRC		=	lib/my_putstr.c	\
-			lib/my_putchar.c	\
-			lib/my_put_nbr.c	\
+SRC		=	src/check_argv.c	\
+			src/flags.c	\
 			src/main.c	\
-			src/check_argv.c	\
-			src/flags.c
+			src/players/both.c	\
+			src/players/one.c	\
+			src/players/two.c	\
 
 OBJ		=	$(SRC:.c=.o)
 
 NAME	=	navy
 
-CPPFLAGS	=	-I./include -W -Wall -Wextra
+LIB		=	lib/libmy.a
 
-$(NAME):	$(OBJ)
-		gcc -o $@ $(OBJ) $(CPPFLAGS) -ggdb3
+LDFLAGS	=	-L./lib
+
+LDLIBS	=	-lmy -lncurses
+
+CPPFLAGS	=	-I./include -g
+
+$(NAME):	$(LIB) $(OBJ)
+		gcc -o $@ $(OBJ) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS) -ggdb3
 
 all:	$(NAME)
+
+$(LIB):
+		make -C lib/my/
 
 clean:
 		rm -f $(OBJ)
 		rm -f $(NAME)
 
-fclean: clean
+fclean:	clean
+		make fclean -C lib/my/
 
-re:     fclean all
-
-.PHONY: all clean fclean re
+re:	fclean all

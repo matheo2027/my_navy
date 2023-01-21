@@ -9,6 +9,7 @@
     #define NAVY_H_
 
     #include <unistd.h>
+    #include "my.h"
 
 int main(int ac, char **av);
 
@@ -16,10 +17,12 @@ void h_flag(void);
 
 int my_putchar(char c);
 
-int my_put_nbr(int nb);
-
-int my_putstr(const char* str);
-
 int check_argv(char **av);
+
+int my_get_pid(void);
+
+void sign_on_one(void);
+
+void sign_on_two(void);
 
 #endif /* !NAVY_H_ */
