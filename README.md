@@ -95,3 +95,10 @@ GESTION ERREUR: (dans ordre à faire)
     
 ///////////////////////////////////////////////////////////////////
 
+if (pos1) {
+    send to one.c
+} else if (pos2) {
+    send to two.c
+} else {
+    error, wrong file name
+}
