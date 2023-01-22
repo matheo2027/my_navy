@@ -10,7 +10,8 @@ SRC		=	src/error_checking.c	\
 			src/main.c	\
 			src/players/both.c	\
 			src/players/one.c	\
-			src/players/two.c
+			src/players/two.c	\
+			src/game.c	\
 
 OBJ		=	$(SRC:.c=.o)
 

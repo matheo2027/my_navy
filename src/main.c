@@ -18,8 +18,10 @@ int main(int ac, char **av)
     }
     if (my_strcmp(av[1], "pos1") == 0 && check_argv(av[1]) == 0) {
         sign_on_one();
+        game(1);
     } else if (my_strcmp(av[2], "pos2") == 0 && check_argv(av[2]) == 0) {
         sign_on_two(av[1]);
+        game(2);
     } else {
         write(2, "Error: invalid input, retry with -h\n", 37);
         return 84;

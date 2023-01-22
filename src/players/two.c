@@ -17,3 +17,8 @@ void sign_on_two(char *pid)
     sleep(1);
     my_printf("successfully connected\n");
 }
+
+void player2_turn(void)
+{
+    return;
+}

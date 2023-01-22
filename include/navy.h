@@ -10,6 +10,7 @@
 
     #include <unistd.h>
     #include <signal.h>
+    #include <stdlib.h>
 
 int main(int ac, char **av);
 
@@ -28,5 +29,17 @@ void sign_on_two(char *pid);
 void get_sig(void);
 
 void connect_handler(int sig_nb, siginfo_t *siginfo, void *ucontext);
+
+int game(int p);
+
+int end_game(void);
+
+void player1_turn(void);
+
+void player2_turn(void);
+
+char *get_coord(void);
+
+int check_coord(char *coord);
 
 #endif /* !NAVY_H_ */

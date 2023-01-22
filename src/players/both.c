@@ -5,6 +5,7 @@
 ** both
 */
 
+#include <stdio.h>
 #include "navy.h"
 #include "my.h"
 
@@ -29,4 +30,18 @@ void get_sig(void)
     sig_act.sa_sigaction = &connect_handler;
     sigaction(SIGUSR1, &sig_act, NULL);
     pause ();
+}
+
+char *get_coord(void)
+{
+    char *coord = NULL;
+    size_t len = 0;
+    ssize_t read;
+    read = getline(&coord, &len, stdin);
+    return (coord);
+}
+
+int check_coord(char *coord)
+{
+    return 0;
 }
