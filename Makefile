@@ -20,7 +20,7 @@ LIB		=	lib/libmy.a
 
 LDFLAGS	=	-L./lib
 
-LDLIBS	=	-lmy -lncurses
+LDLIBS	=	-lmy
 
 CPPFLAGS	=	-I./include -g
 

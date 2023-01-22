@@ -10,9 +10,8 @@
 
 void sign_on_one(void)
 {
-    int pid = my_get_pid();
-    my_printf("my_pid: %d\n", pid);
+    int p1_pid = my_get_pid();
+    my_printf("my_pid: %d\n", p1_pid);
     my_printf("waiting for enemy connection...\n");
-    pause();
-    my_printf("enemy connected\n");
+    get_sig();
 }

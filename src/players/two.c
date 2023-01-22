@@ -8,8 +8,12 @@
 #include "navy.h"
 #include "my.h"
 
-void sign_on_two(void)
+void sign_on_two(char *pid)
 {
-    int pid = my_get_pid();
-    my_printf("my_pid: %d\nsuccessfully connected\n", pid);
+    int p1_pid = my_getnbr(pid);
+    int p2_pid = my_get_pid();
+    kill(p1_pid, SIGUSR1);
+    my_printf("my_pid: %d\n", p2_pid);
+    sleep(1);
+    my_printf("successfully connected\n");
 }

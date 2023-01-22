@@ -9,6 +9,7 @@
     #define NAVY_H_
 
     #include <unistd.h>
+    #include <signal.h>
 
 int main(int ac, char **av);
 
@@ -22,6 +23,10 @@ int my_get_pid(void);
 
 void sign_on_one(void);
 
-void sign_on_two(void);
+void sign_on_two(char *pid);
+
+void get_sig(void);
+
+void connect_handler(int sig_nb, siginfo_t *siginfo, void *ucontext);
 
 #endif /* !NAVY_H_ */
