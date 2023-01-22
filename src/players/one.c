@@ -6,6 +6,7 @@
 */
 
 #include "navy.h"
+#include "my.h"
 
 void sign_on_one(void)
 {

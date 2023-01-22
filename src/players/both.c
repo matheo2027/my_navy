@@ -6,6 +6,7 @@
 */
 
 #include "navy.h"
+#include "my.h"
 
 int my_get_pid(void)
 {

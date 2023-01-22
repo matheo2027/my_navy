@@ -5,6 +5,8 @@
 ** .
 */
 
+int my_strcmp(char const *s1, char const *s2);
+
 int my_strncmp(char const *s1, char const *s2, int n)
 {
     int i = 0;

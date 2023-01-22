@@ -6,6 +6,7 @@
 */
 
 #include "navy.h"
+#include "my.h"
 
 void h_flag(void)
 {

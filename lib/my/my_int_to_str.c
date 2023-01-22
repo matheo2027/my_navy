@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int my_strlen(char const *str);
+
 void my_swap(char *a, char *b)
 {
     char x = *a;
@@ -38,7 +40,7 @@ int my_abs(int nb)
     }
 }
 
-char *int_to_str(char *str, int nb)
+char *my_int_to_str(char *str, int nb)
 {
     int i = 0;
     int res = 0;

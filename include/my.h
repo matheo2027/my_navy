@@ -84,4 +84,6 @@
 
     char* my_int_to_str(char* str, int nb);
 
+    int my_printf(const char* restrict format, ...);
+
 #endif

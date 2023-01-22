@@ -5,7 +5,7 @@
 ## Une desc
 ##
 
-SRC		=	src/check_argv.c	\
+SRC		=	src/error_checking.c	\
 			src/flags.c	\
 			src/main.c	\
 			src/players/both.c	\

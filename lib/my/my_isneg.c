@@ -7,6 +7,8 @@
 ** negative, or P, if positive, or null.
 */
 
+int my_putchar(char c);
+
 int my_isneg(int n)
 {
     int a;
@@ -17,10 +19,7 @@ int my_isneg(int n)
     } else {
         a = 80;
     }
-
     c = a + 0;
-
     my_putchar(c);
-
     return (n);
 }

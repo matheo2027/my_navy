@@ -9,15 +9,14 @@
     #define NAVY_H_
 
     #include <unistd.h>
-    #include "my.h"
 
 int main(int ac, char **av);
 
 void h_flag(void);
 
-int my_putchar(char c);
+int nb_ac_check(int ac);
 
-int check_argv(char **av);
+int check_argv(char *file);
 
 int my_get_pid(void);
 
