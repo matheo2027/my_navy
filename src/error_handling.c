@@ -19,6 +19,11 @@ int nb_ac_check(int ac)
     return 0;
 }
 
+int error_map(char *file)
+{
+    return (0);
+}
+
 int check_argv(char *file)
 {
     FILE *fp;
@@ -26,6 +31,9 @@ int check_argv(char *file)
     if (fp == NULL) {
         write(2, "ERROR: FILE NOT FOUND\n", 23);
         return (1);
+    }
+    if (error_map(file) != 0) {
+        write(2, "FAULTY FILE\n", 13);
     }
     fclose(fp);
     return (0);

@@ -44,4 +44,6 @@ int check_coord(char *coord);
 
 int print_start_map(void);
 
+int error_map(char *file);
+
 #endif /* !NAVY_H_ */
