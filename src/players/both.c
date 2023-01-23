@@ -18,7 +18,6 @@ int my_get_pid(void)
 void connect_handler(int sig_nb, siginfo_t *siginfo, void *ucontext)
 {
     if (sig_nb == SIGUSR1) {
-        sleep(1);
         my_printf("\nenemy connected\n");
     }
 }

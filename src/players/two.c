@@ -14,7 +14,6 @@ void sign_on_two(char *pid)
     int p2_pid = my_get_pid();
     kill(p1_pid, SIGUSR1);
     my_printf("my_pid: %d\n", p2_pid);
-    sleep(1);
     my_printf("successfully connected\n\n");
     print_start_map();
 }
