@@ -12,7 +12,7 @@ void sign_on_one(void)
 {
     int p1_pid = my_get_pid();
     my_printf("my_pid: %d\n", p1_pid);
-    my_printf("waiting for enemy connection...\n");
+    my_printf("waiting for enemy connection...\n\n");
     get_sig();
     print_start_map();
 }
