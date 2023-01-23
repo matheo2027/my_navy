@@ -16,6 +16,7 @@ void sign_on_two(char *pid)
     my_printf("my_pid: %d\n", p2_pid);
     sleep(1);
     my_printf("successfully connected\n");
+    print_start_map();
 }
 
 void player2_turn(void)

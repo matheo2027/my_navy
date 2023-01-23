@@ -14,6 +14,7 @@ void sign_on_one(void)
     my_printf("my_pid: %d\n", p1_pid);
     my_printf("waiting for enemy connection...\n");
     get_sig();
+    print_start_map();
 }
 
 void player1_turn(void)

@@ -12,6 +12,7 @@ SRC		=	src/error_checking.c	\
 			src/players/one.c	\
 			src/players/two.c	\
 			src/game.c	\
+			src/map/print_map_start.c
 
 OBJ		=	$(SRC:.c=.o)
 
@@ -28,16 +29,18 @@ CPPFLAGS	=	-I./include -g
 $(NAME):	$(LIB) $(OBJ)
 		gcc -o $@ $(OBJ) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS) -ggdb3
 
-all:	$(NAME)
+all:	$(NAME) $(LIB)
 
 $(LIB):
 		make -C lib/my/
 
 clean:
 		rm -f $(OBJ)
-		rm -f $(NAME)
+
 
 fclean:	clean
-		make fclean -C lib/my/
+		rm -f $(NAME)
 
 re:	fclean all
+
+.PHONY: all clean fclean re

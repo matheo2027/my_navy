@@ -42,4 +42,6 @@ char *get_coord(void);
 
 int check_coord(char *coord);
 
+int print_start_map(void);
+
 #endif /* !NAVY_H_ */
