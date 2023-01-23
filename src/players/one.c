@@ -36,5 +36,4 @@ void player1_turn(void)
             my_printf("%s\n", coord);
         }
     } while (my_strcmp(result, "hit") == 0);
-
 }
