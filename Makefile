@@ -30,10 +30,10 @@ CPPFLAGS	=	-I./include -g
 $(NAME):	$(LIB) $(OBJ)
 		gcc -o $@ $(OBJ) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS) -ggdb3
 
-all:	$(NAME) $(LIB)
-
 $(LIB):
 		make -C lib/my/
+
+all:	$(NAME) $(LIB)
 
 clean:
 		rm -f $(OBJ)
@@ -41,7 +41,6 @@ clean:
 
 fclean:	clean
 		rm -f $(NAME)
-		make fclean -C lib/my/
 
 re:	fclean all
 
