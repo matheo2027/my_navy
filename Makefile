@@ -9,6 +9,7 @@ SRC		=	src/error/error_handling.c	\
 			src/flags.c	\
 			src/main.c	\
 			src/players/both.c	\
+			src/players/both2.c	\
 			src/players/one.c	\
 			src/players/two.c	\
 			src/game.c	\

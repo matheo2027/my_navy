@@ -20,5 +20,7 @@ void sign_on_two(char *pid)
 
 void player2_turn(void)
 {
-    return;
+    // print maps
+    my_printf("waiting for enemy's attack...\n");
+    get_enemy_coord();
 }

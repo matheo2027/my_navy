@@ -17,12 +17,10 @@ int my_get_pid(void)
 
 void connect_handler(int sig_nb, siginfo_t *siginfo, void *ucontext)
 {
-    if (sig_nb == SIGUSR1) {
-        my_printf("\nenemy connected\n");
-    }
+    my_printf("\nenemy connected\n");
 }
 
-void get_sig(void)
+void get_sig()
 {
     struct sigaction sig_act = {0};
     sig_act.sa_flags = SA_RESTART | SA_SIGINFO;

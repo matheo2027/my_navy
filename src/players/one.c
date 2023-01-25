@@ -17,23 +17,33 @@ void sign_on_one(void)
     print_start_map();
 }
 
+void enemy_turn(void)
+{
+    my_printf("waiting for enemy's attack...\n");
+   kill(p2_pid, SIGUSR2);
+}
+
 void player1_turn(void)
 {
-    char *result = malloc(sizeof(char) * 10);
     char *coord = malloc(sizeof(char) * 2);
-    my_printf("my positions:\n");
-
-    my_printf("enemy's positions:\n");
-
-
     do {
+        // print maps
         my_printf("attack: ");
         coord = get_coord();
         if (check_coord(coord) == 1) {
             my_putstr("wrong position\n");
-            result = "hit";
+            // try again somehow
         } else {
             my_printf("%s\n", coord);
         }
-    } while (my_strcmp(result, "hit") == 0);
+        if (check_result(coord) == 1) {
+            my_printf("%s: hit", coord);
+            //updated maps = upd_maps_func('h');
+        } else {
+            my_printf("%s: missed", coord);
+            //updated maps = upd_maps_func('m');
+        }
+        enemy_turn();
+    } while (end_game() != 0);
+
 }
