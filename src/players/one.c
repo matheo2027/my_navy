@@ -33,7 +33,6 @@ void player1_turn(struct info_s *info)
             my_putstr("wrong position\n");
         } else {
             info->coord = coord;
-            my_printf("%s\n", coord);
         }
         if (check_result(coord) == 1) {
             info->res = 'h';
