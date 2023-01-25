@@ -5,14 +5,15 @@
 ## Une desc
 ##
 
-SRC		=	src/error_handling.c	\
+SRC		=	src/error/error_handling.c	\
 			src/flags.c	\
 			src/main.c	\
 			src/players/both.c	\
 			src/players/one.c	\
 			src/players/two.c	\
 			src/game.c	\
-			src/map/print_map_start.c
+			src/map/print_map_start.c	\
+			src/error/error_map.c
 
 OBJ		=	$(SRC:.c=.o)
 

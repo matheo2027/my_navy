@@ -40,7 +40,7 @@ SRC	=	my_compute_power_rec.c	\
 		my_strstr.c	\
 		my_str_to_words_array.c	\
 		my_strupcase.c	\
-		my_swap.c	\
+		my_swap.c
 
 OBJ	=	$(SRC:.c=.o)
 

@@ -18,7 +18,9 @@ void h_flag(void);
 
 int nb_ac_check(int ac);
 
-int check_argv(char *file);
+int check_argv(char **av, int n);
+
+int check_argv_help(char *line, int i);
 
 int my_get_pid(void);
 
@@ -43,7 +45,5 @@ char *get_coord(void);
 int check_coord(char *coord);
 
 int print_start_map(void);
-
-int error_map(char *file);
 
 #endif /* !NAVY_H_ */
