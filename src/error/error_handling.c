@@ -19,19 +19,19 @@ int nb_ac_check(int ac)
     return 0;
 }
 
-int check_argv_help(char *line, int i)
+int check_argv_help(char *symb, int i)
 {
-    if (line[0] != i + '0'){
+    if (symb[0] != i + '0'){
         write(2, "ERROR: BOAT'S FIRST NUMBER IS UNVAILABLE\n", 42);
         return (84);
     }
-    if ((line[2] < 'A' || line[2] > 'H') || (line[5] < 'A' || line[5] > 'H')
-        || (line[3] < '1' || line[3] > '8') || (line[6] < '1' || line[6] > '8')
-        || (line[1] != ':' || line[4] != ':')) {
+    if ((symb[2] < 'A' || symb[2] > 'H') || (symb[5] < 'A' || symb[5] > 'H')
+        || (symb[3] < '1' || symb[3] > '8') || (symb[6] < '1' || symb[6] > '8')
+        || (symb[1] != ':' || symb[4] != ':')) {
         write(2, "ERROR: BOAT'S COORDINATES ARE UNVAILABLE\n", 42);
         return (84);
     }
-    if ((line[5] - line[2]) + (line[6] - line[3]) != i - 1) {
+    if ((symb[5] - symb[2]) + (symb[6] - symb[3]) != i - 1) {
         write(2, "ERROR: BOAT'S LENGHT IS UNVAILABLE\n", 36);
         return (84);
     }
@@ -41,7 +41,7 @@ int check_argv(char **av, int n)
 {
     int i = 2;
     FILE *fp;
-    char *line = NULL;
+    char *symb = NULL;
     size_t len = 0;
     ssize_t nread;
     fp = fopen(av[n], "r");
@@ -49,12 +49,12 @@ int check_argv(char **av, int n)
         write(2, "ERROR: FILE NOT FOUND\n", 23);
         return (84);
     }
-    while((nread = getline(&line, &len, fp)) != -1) {
-        if (my_strlen(line) != 8 && my_strlen(line) != 7) {
+    while((nread = getline(&symb, &len, fp)) != -1) {
+        if (my_strlen(symb) != 8 && my_strlen(symb) != 7) {
             write(2, "ERROR: FILE IS UNVAILABLE\n", 25);
             return (84);
         }
-        if (check_argv_help(line, i) == 84)
+        if (check_argv_help(symb, i) == 84)
             return (84);
         i++;
     }
