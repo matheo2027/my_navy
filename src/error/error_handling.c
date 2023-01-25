@@ -49,11 +49,9 @@ int check_argv(char **av, int n)
         write(2, "ERROR: FILE NOT FOUND\n", 23);
         return (84);
     }
-    while((nread = getline(&symb, &len, fp)) != -1) {
-        if (my_strlen(symb) != 8 && my_strlen(symb) != 7) {
-            write(2, "ERROR: FILE IS UNVAILABLE\n", 25);
+    while ((nread = getline(&symb, &len, fp)) != -1) {
+        if (my_strlen(symb) != 8 && my_strlen(symb) != 7)
             return (84);
-        }
         if (check_argv_help(symb, i) == 84)
             return (84);
         i++;

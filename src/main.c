@@ -10,6 +10,7 @@
 
 int main(int ac, char **av)
 {
+    struct info_s *info;
     if (nb_ac_check(ac) == 1)
         return 84;
     if (av[1][0] == '-' && av[1][1] == 'h' && av[1][2] == '\0') {
@@ -18,12 +19,14 @@ int main(int ac, char **av)
     }
     if (ac == 2 && check_argv(av, 1) == 0) {
         sign_on_one();
-        game(1);
+        game(1, info);
     } else if (ac == 3 && check_argv(av, 2) == 0) {
-        sign_on_two(av[1]);
-        game(2);
+        info = sign_on_two(av[1]);
+        game(2, info);
     } else {
+        write(2, "ERROR: FILE IS UNVAILABLE\n", 27);
         return 84;
     }
-    return (0);
+
+    return 0;
 }

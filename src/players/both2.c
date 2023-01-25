@@ -9,9 +9,15 @@
 
 void turn_handler(int sig_nb, siginfo_t *siginfo, void *ucontext)
 {
-    if (sig_nb == SIGUSR2) {
-        my_printf("%s: ", coord);
-    }
+    return;
+}
 
-    // if USR1 -> 
+void get_enemy_coord(void)
+{
+    return;
+}
+
+int check_result(char *coord)
+{
+    return 0;
 }

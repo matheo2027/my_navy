@@ -12,6 +12,13 @@
     #include <signal.h>
     #include <stdlib.h>
 
+    typedef struct info_s {
+        int p1_pid;
+        int p2_pid;
+        char *coord;
+        char res;
+    } info_s;
+
 int main(int ac, char **av);
 
 void h_flag(void);
@@ -26,23 +33,29 @@ int my_get_pid(void);
 
 void sign_on_one(void);
 
-void sign_on_two(char *pid);
+struct info_s *sign_on_two(char *pid);
 
 void get_sig(void);
 
 void connect_handler(int sig_nb, siginfo_t *siginfo, void *ucontext);
 
-int game(int p);
+void turn_handler(int sig_nb, siginfo_t *siginfo, void *ucontext);
+
+int game(int p, struct info_s *info);
 
 int end_game(void);
 
-void player1_turn(void);
+void player1_turn(struct info_s *info);
 
-void player2_turn(void);
+void player2_turn(struct info_s *info);
 
 char *get_coord(void);
 
 int check_coord(char *coord);
+
+int check_result(char *coord);
+
+void get_enemy_coord(void);
 
 int print_start_map(void);
 
