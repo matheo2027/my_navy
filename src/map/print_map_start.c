@@ -10,13 +10,20 @@
 
 int print_start_map(void)
 {
-    my_printf("my positions:\n |A B C D E F G H\n-+---------------\n"
-    "1|. . . . . . . .\n2|. . . . . . . .\n3|. . . . . . . .\n"
-    "4|. . . . . . . .\n5|. . . . . . . .\n6|. . . . . . . .\n"
-    "7|. . . . . . . .\n8|. . . . . . . .\n\nenemy's positions:\n"
-    " |A B C D E F G H\n-+---------------\n"
-    "1|. . . . . . . .\n2|. . . . . . . .\n3|. . . . . . . .\n"
-    "4|. . . . . . . .\n5|. . . . . . . .\n6|. . . . . . . .\n"
-    "7|. . . . . . . .\n8|. . . . . . . .\n");
+    int index = 1;
+    my_printf("my positions:\n |A B C D E F G H\n-+---------------\n");
+    while (index < 9) {
+        my_printf("%d", index);
+        my_printf("|. . . . . . . .\n");
+        index++;
+    }
+    my_printf("\n");
+    index = 1;
+    my_printf("enemy's positions:\n |A B C D E F G H\n-+---------------\n");
+    while (index < 9) {
+        my_printf("%d", index);
+        my_printf("|. . . . . . . .\n");
+        index++;
+    }
     return 0;
 }
