@@ -14,8 +14,8 @@ A list of technologies used within the project:
 ## Installation
 ***
 ```
-$ git clone git@github.com:EpitechPromo2027/B-SYN-200-BDX-2-1-fastatools-matheo.piques.git
-$ cd ./B-SYN-200-BDX-2-1-sbmlparser-matheo.piques
+$ git clone git@github.com:matheo2027/my_navy.git
+$ cd my_navy
 $ make
-$ ./FASTAtools -h
+$ ./my_navy -h
 ```
